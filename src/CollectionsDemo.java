@@ -6,7 +6,7 @@ public class CollectionsDemo {
     // 10^6 = 1 million
     // 10^9 = 1 billion
     // 10^10 = 10 billion, too big for Phil's computer
-    public static final int HOW_MANY_NUMS = (int) Math.pow(10,6);
+    public static final int HOW_MANY_NUMS = (int) Math.pow(10,8);
 
 
     public static void main(String[] args) {
@@ -31,6 +31,10 @@ public class CollectionsDemo {
         end = System.currentTimeMillis();
         System.out.println(String.format("LinkedList Time: %.3f seconds", (end - start) / 1000.0));
 
+        start = System.currentTimeMillis();
+        new ArrayListDemo(HOW_MANY_NUMS, rand);
+        end = System.currentTimeMillis();
+        System.out.println(String.format("ArrayList Time: %.3f seconds", (end - start) / 1000.0));
 
     }
 
