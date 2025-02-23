@@ -1,7 +1,5 @@
 ﻿using System;
-namespace CollectionsDemo
-{
-    public class ArrayDemo
+public class ArrayDemo
     {
         private int[] nums;
 
@@ -20,4 +18,3 @@ namespace CollectionsDemo
             }
         }
     }
-}
