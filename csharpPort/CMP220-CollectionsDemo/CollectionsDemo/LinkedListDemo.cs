@@ -9,13 +9,13 @@ public class LinkedListDemo {
         nums = new LinkedList<int>();
         for(int i = 0; i < howManyNums; i++) {
             // is this really an equivalent to nextInt?
-            nums.Add(rand.Next(howManyNums));
+            //nums.Add(rand.Next(howManyNums));
         }
 
         Console.WriteLine("The first few numbers are: ");
         for(int i = 0; i < 6; i++)
         {
-            Console.WriteLine(nums.get(i));
+            Console.WriteLine(nums.ElementAt(i));
         }
     }
 }

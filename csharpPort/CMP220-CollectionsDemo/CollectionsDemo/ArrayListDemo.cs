@@ -1,18 +1,19 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 public class ArrayListDemo {
-    private ArrayList<int> nums;
+    private ArrayList nums;
 
     public ArrayListDemo(int howManyNums, Random rand) {
-        nums = new ArrayList<Integer>();
+        nums = new ArrayList();
         for(int i = 0; i < howManyNums; i++) {
-            nums.add(rand.nextInt(howManyNums));
+            nums.Add(rand.Next(howManyNums));
         }
 
-        System.out.println("The first few numbers are: ");
+        Console.WriteLine("The first few numbers are: ");
         for(int i = 0; i < 6; i++){
-            Console.WriteLine(nums.get(i));
+            Console.WriteLine(nums[i]);
         }
     }
 }
