@@ -3,7 +3,7 @@
 public class Program
 {
     public static int HowManyNums = (int)Math.Pow(10,8);
-    // the seed should be changed to int64 5564011392837540628 eventually. this is just for testing
+    // the seed should be changed to int64 5564011392837540628 eventually, if possible..
     public static int Seed = 556401139;
 
     private static int _howManyTests = 3;
@@ -25,6 +25,7 @@ public class Program
         _arrayListTests = new double[_howManyTests];
         for (int i = 0; i < _howManyTests; i++)
         {
+            Console.WriteLine("Running test #" + (i + 1) + "...");
             // oh this is SO cursed.
             // this is my way of doing java's System.currentTimeMillis() which starts at UNIX epoch time
             long start = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)).TotalMilliseconds;
@@ -57,6 +58,14 @@ public class Program
             _arrayListTests[i] = _arrayListTime;
         }
         
+        Console.WriteLine("All tests finished, printing all results...");
+        Console.WriteLine("All Array tests: ");
         Array.ForEach(_arrayTests, Console.WriteLine);
+        Console.WriteLine("All Vector tests: ");
+        Array.ForEach(_vectorTests, Console.WriteLine);
+        Console.WriteLine("All LinkedList tests: ");
+        Array.ForEach(_linkedListTests, Console.WriteLine);
+        Console.WriteLine("All ArrayList tests: ");
+        Array.ForEach(_arrayListTests, Console.WriteLine);
     }
 }
