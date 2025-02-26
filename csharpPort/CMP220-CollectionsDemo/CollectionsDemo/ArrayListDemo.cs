@@ -10,8 +10,7 @@ public class ArrayListDemo {
         for(int i = 0; i < howManyNums; i++) {
             _nums.Add(rand.Next(howManyNums));
         }
-
-        // i don't think this is right
+        
         Console.WriteLine("The first few numbers are: ");
         for(int i = 0; i < 6; i++){
             Console.WriteLine(_nums[i]);
