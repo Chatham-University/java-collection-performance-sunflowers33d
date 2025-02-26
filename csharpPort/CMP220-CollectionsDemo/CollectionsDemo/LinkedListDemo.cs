@@ -12,10 +12,10 @@ public class LinkedListDemo {
             //nums.Add(rand.Next(howManyNums));
         }
 
-        Console.WriteLine("The first few numbers are: ");
-        for(int i = 0; i < 6; i++)
-        {
-            Console.WriteLine(nums.ElementAt(i));
-        }
+        // Console.WriteLine("The first few numbers are: ");
+        // for(int i = 0; i < 6; i++)
+        // {
+        //     Console.WriteLine(nums.ElementAt(i));
+        // }
     }
 }

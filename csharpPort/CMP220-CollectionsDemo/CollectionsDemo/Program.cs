@@ -9,8 +9,12 @@ public class Program
     private static int HowManyTests = 3;
     private static double[] arrayTests;
     private static double[] vectorTests;
+    private static double[] linkedListTests;
+    private static double[] arrayListTests;
     private static double ArrayTime;
     private static double VectorTime;
+    private static double LinkedListTime;
+    private static double ArrayListTime;
     public static void Main(string[] args)
     {
         Random rand = new Random(Seed);
@@ -20,6 +24,8 @@ public class Program
         
         arrayTests = new double[HowManyTests];
         vectorTests = new double[HowManyTests];
+        linkedListTests = new double[HowManyTests];
+        arrayListTests = new double[HowManyTests];
         for (int i = 0; i < HowManyTests; i++)
         {
             // oh this is SO cursed.
@@ -38,6 +44,22 @@ public class Program
             VectorTime = (end - start) / 1000.0;
             Console.WriteLine(String.Format("Vector (actually List) Time: " + VectorTime + " seconds"));
             vectorTests[i] = VectorTime;
+            
+            // start = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)).TotalMilliseconds;
+            // new LinkedListDemo(HOW_MANY_NUMS, rand);
+            // end = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)).TotalMilliseconds;  
+            // LinkedListTime = (end - start) / 1000.0;
+            // Console.WriteLine(String.Format("LinkedList Time: " + LinkedListTime + " seconds"));
+            // linkedListTests[i] = LinkedListTime;
+            
+            start = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)).TotalMilliseconds;
+            new LinkedListDemo(HOW_MANY_NUMS, rand);
+            end = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)).TotalMilliseconds;  
+            ArrayListTime = (end - start) / 1000.0;
+            Console.WriteLine(String.Format("ArrayList Time: " + LinkedListTime + " seconds"));
+            arrayListTests[i] = ArrayListTime;
         }
+        
+        Array.ForEach(arrayTests, Console.WriteLine);
     }
 }
