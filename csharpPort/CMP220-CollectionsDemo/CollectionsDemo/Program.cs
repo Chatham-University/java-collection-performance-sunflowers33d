@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 public class Program
 {
@@ -61,11 +62,19 @@ public class Program
         Console.WriteLine("All tests finished, printing all results...");
         Console.WriteLine("All Array tests: ");
         Array.ForEach(_arrayTests, Console.WriteLine);
+        Console.WriteLine("Maximum Array time of all runs: " + _arrayTests.Max());
+        Console.WriteLine("Average of all Array times: " + _arrayTests.Average());
         Console.WriteLine("All Vector tests: ");
         Array.ForEach(_vectorTests, Console.WriteLine);
+        Console.WriteLine("Maximum Vector time of all runs: " + _vectorTests.Max());
+        Console.WriteLine("Average of all Vector times: " + _vectorTests.Average());
         Console.WriteLine("All LinkedList tests: ");
         Array.ForEach(_linkedListTests, Console.WriteLine);
+        Console.WriteLine("Maximum LinkedList time of all runs: " + _linkedListTests.Max());
+        Console.WriteLine("Average of all LinkedList times: " + _linkedListTests.Average());
         Console.WriteLine("All ArrayList tests: ");
         Array.ForEach(_arrayListTests, Console.WriteLine);
+        Console.WriteLine("Maximum ArrayList time of all runs: " + _arrayListTests.Max());
+        Console.WriteLine("Average of all ArrayList times: " + _arrayListTests.Average());
     }
 }
