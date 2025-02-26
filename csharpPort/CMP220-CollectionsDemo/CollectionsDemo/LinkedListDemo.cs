@@ -4,18 +4,18 @@ using System.Linq;
 
 // it didn't let me use sealed/override here, hopefully not a problem..?
 public class LinkedListDemo {
-    private LinkedList<int> nums;
+    private LinkedList<int> _nums;
     public LinkedListDemo(int howManyNums, Random rand) {
-        nums = new LinkedList<int>();
+        _nums = new LinkedList<int>();
         for(int i = 0; i < howManyNums; i++) {
             // is this really an equivalent to nextInt?
-            //nums.Add(rand.Next(howManyNums));
+            _nums.AddLast(rand.Next(howManyNums));
         }
-
-        // Console.WriteLine("The first few numbers are: ");
-        // for(int i = 0; i < 6; i++)
-        // {
-        //     Console.WriteLine(nums.ElementAt(i));
-        // }
+        
+        Console.WriteLine("The first few numbers are: ");
+        for(int i = 0; i < 6; i++)
+        {
+            Console.WriteLine(_nums.ElementAt(i));
+        }
     }
 }
