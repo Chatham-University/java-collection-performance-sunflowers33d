@@ -28,3 +28,7 @@ Example:
     10.905
     Maximum ArrayList value of all runs: 11.161
     Average of all ArrayList values: 11.0333333333333
+
+
+## Results
+After running 10 tests, I found that for everything but **ArrayList**, the C# port performed noticably faster especially when reaching higher numbers in the 100 million range. Just like the original Java version, I was unable to run a test of 1 billion numbers even with ~20 GB of RAM at my disposal.

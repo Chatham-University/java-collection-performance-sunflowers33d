@@ -3,11 +3,11 @@ using System.Linq;
 
 public class Program
 {
-    public static int HowManyNums = (int)Math.Pow(10,8);
+    public static int HowManyNums = (int)Math.Pow(10,3);
     // the seed should be changed to int64 5564011392837540628 eventually, if possible..
     public static int Seed = 556401139;
 
-    private static int _howManyTests = 3;
+    private static int _howManyTests = 10;
     private static double[] _arrayTests;
     private static double[] _vectorTests;
     private static double[] _linkedListTests;
